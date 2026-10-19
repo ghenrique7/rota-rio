@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RioRota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header-light">
+        <p class="eyebrow">RioRota</p>
+        <h1 class="title">Para onde você vai pelo rio hoje?</h1>
+        <p class="subtitle" id="subtitle">Horários de barcos e lanchas</p>
+      </header>
+      <main class="main main--home">
+        <section class="card search-card" id="buscar" aria-label="Buscar horários">
+          <p class="status" id="carregando">Carregando cidades…</p>
+          <form id="search-form" hidden>
+            <div class="field-group">
+              <label class="field" for="origem">
+                <span class="field__label">Origem</span>
+                <select id="origem" class="field__control"></select>
+              </label>
+              <button
+                type="button"
+                id="trocar"
+                class="swap-btn"
+                aria-label="Trocar origem e destino"
+              >
+                ⇅
+              </button>
+              <label class="field" for="destino">
+                <span class="field__label">Destino</span>
+                <select id="destino" class="field__control"></select>
+              </label>
+            </div>
+            <label class="field field--date" for="data">
+              <span class="field__label">Data</span>
+              <span class="field__value" id="data-label"></span>
+              <input type="date" id="data" class="field__date" required />
+            </label>
+            <p class="form-status" id="form-status" role="alert"></p>
+            <button type="submit" id="buscar-submit" class="pill btn btn--primary" disabled>
+              Buscar horários
+            </button>
+          </form>
+        </section>
+
+        <section class="popular" aria-labelledby="populares-titulo">
+          <div class="section-head">
+            <h2 id="populares-titulo" class="section-title">Rotas populares</h2>
+            <a class="section-link" href="rotas.html">Ver todas</a>
+          </div>
+          <p class="status" id="populares-status"></p>
+          <ul class="route-list" id="populares"></ul>
+        </section>
+      </main>
+      <div id="nav-root"></div>
+    </div>
+    <script type="module">
+      import { renderNav } from "./js/nav.js";
+      renderNav("inicio");
+    </script>
+    <script type="module" src="./js/pages/home.js"></script>
+  </body>
+</html>

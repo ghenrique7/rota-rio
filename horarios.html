@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Horários · RioRota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header-dark">
+        <a class="back-link" href="index.html#buscar" aria-label="Voltar para a busca">← Voltar</a>
+        <h1 class="title" id="rota">Horários</h1>
+        <p class="subtitle" id="resumo"></p>
+      </header>
+      <main class="main">
+        <div id="conteudo" hidden>
+          <div class="chips" id="chips" aria-label="Filtrar por tipo de embarcação"></div>
+          <p class="disclaimer">
+            Horários ilustrativos — confirme antes de ir. Podem mudar com o nível
+            do rio, clima e rodízio das agências.
+          </p>
+        </div>
+        <div id="mensagem" class="message" hidden></div>
+        <ul class="trip-list" id="viagens"></ul>
+      </main>
+      <div id="nav-root"></div>
+    </div>
+    <script type="module">
+      import { renderNav } from "./js/nav.js";
+      renderNav("buscar");
+    </script>
+    <script type="module" src="./js/pages/horarios.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meus interesses · RioRota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header-dark">
+        <h1 class="title">Meus interesses</h1>
+      </header>
+      <main class="main">
+        <div class="chips" id="abas" aria-label="Filtrar interesses"></div>
+        <p class="status" id="mensagem" role="status"></p>
+        <ul class="trip-list" id="interesses"></ul>
+      </main>
+      <div id="nav-root"></div>
+    </div>
+    <script type="module">
+      import { renderNav } from "./js/nav.js";
+      renderNav("interesses");
+    </script>
+    <script type="module" src="./js/pages/interesses.js"></script>
+  </body>
+</html>

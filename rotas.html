@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rotas · RioRota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header-dark">
+        <h1 class="title">Rotas fluviais</h1>
+        <p class="subtitle" id="subtitulo"></p>
+      </header>
+      <main class="main">
+        <label class="field" for="origem" id="seletor" hidden>
+          <span class="field__label">Origem</span>
+          <select id="origem" class="field__control"></select>
+        </label>
+        <p class="section-title route-count" id="contagem"></p>
+        <p class="status" id="mensagem" role="status"></p>
+        <ul class="route-list route-list--stack" id="destinos"></ul>
+      </main>
+      <div id="nav-root"></div>
+    </div>
+    <script type="module">
+      import { renderNav } from "./js/nav.js";
+      renderNav("rotas");
+    </script>
+    <script type="module" src="./js/pages/rotas.js"></script>
+  </body>
+</html>

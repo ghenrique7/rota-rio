@@ -1,0 +1,3 @@
+# Site estático: sem build. A raiz do repositório é publicada como está.
+[build]
+  publish = "."

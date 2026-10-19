@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detalhes da viagem · RioRota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header-dark">
+        <a class="back-link" id="voltar" href="index.html" aria-label="Voltar">← Voltar</a>
+        <h1 class="title">Detalhes da viagem</h1>
+      </header>
+      <main class="main">
+        <div id="mensagem" class="message" hidden></div>
+        <div id="detalhes" class="details" hidden></div>
+      </main>
+      <div id="nav-root"></div>
+    </div>
+    <script type="module">
+      import { renderNav } from "./js/nav.js";
+      renderNav("buscar");
+    </script>
+    <script type="module" src="./js/pages/viagem.js"></script>
+  </body>
+</html>
